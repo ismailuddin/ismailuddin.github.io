@@ -1,0 +1,206 @@
+body {
+    background: linear-gradient(130deg, #F7FAFC 3%, rgba(#DFEBF7, 0.5) 100%);
+}
+
+
+
+.content {
+    padding: 25px;
+    @media(min-width: $breakpoint){
+        padding: 45px;
+
+    }
+
+    &-left {
+        margin-top: 50px;
+
+        .box {
+            @media(min-width: $breakpoint){
+                width: 40%;
+                position: fixed;
+                margin: 25px;
+                height: auto;
+                max-height: 75vh;
+            }
+
+            overflow-y: scroll;
+            background-color: white;
+            padding: 20px;
+            margin: 5px;
+            border-radius: 0px 0px 10px 10px;
+            border-top: 10px solid $teal400a;
+            box-shadow: 0px 10px 30px rgba($primary, 0.25);
+            transition: all 0.15s ease-in;
+
+            &:hover {
+                box-shadow: 0px 20px 50px rgba($teal800, 0.35);
+            }
+        }
+    }
+
+    &-right {
+        @media(min-width: $breakpoint){
+            margin-top: 75px;
+        }
+    }
+}
+
+.card {
+    padding: 15px 20px;
+    display: block !important;
+    background-color: rgba(white, 0.75);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px rgba($indigo900dark, 0.1);
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover, &:focus {
+        background-color: rgba(white, 0.9);
+        box-shadow: 0px 5px 10px rgba($teal800, 0.2);
+    }
+
+
+    button.open-card {
+        background-color: $deeporange400a;
+        border-radius: 35px;
+        width: 35px;
+        height: 35px;
+        padding-top: 6px;
+        border: none;
+        text-align: center;
+        bottom: -30px;
+        left: 50%;
+        position: relative;
+        box-shadow: 0px 2px 5px rgba(black, 0.4);
+
+        i {
+            color: white;
+            font-size: 1.6em;
+            top: 50%;
+            left: 45%;
+            transition: all 0.1s;
+
+            &.closeCard {
+                transform: rotate(180deg) translateY(2px);
+            }
+
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+}
+
+a.btn.social-media {
+    font-family: 'IBM Plex Sans';
+    font-size: 1.2em;
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+    border-bottom: none;
+    display: inline-block;
+    transition: all 0.3s;
+    margin-bottom: 8px;
+
+    i {
+        color: white;
+    }
+
+    &:hover, &:focus {
+        box-shadow: 0px 5px 14px -3px rgba(0, 0, 0, 0.6);
+        transform: scale(1.1);
+        border-bottom: none;
+    }
+
+    &.twitter {
+        background-image: linear-gradient(135deg, #1dcaff 0%, darken(#1dcaff, 10%) 100%);
+        color: white;
+    }
+
+    &.github {
+        font-family: 'IBM Plex Mono';
+        background-color: #333333;
+        color: white;
+        &.smaller {
+            font-size: 1em;
+        }
+    }
+
+    &.instagram {
+        background-image: linear-gradient(135deg, #bc2a8d 0%, #fbad50 100%);
+        color: white;
+        transition: all 0.2s;
+
+        &:hover {
+            background-image: linear-gradient(100deg, #bc2a8d 0%, #fbad50 100%);
+        }
+    }
+
+    &._500px {
+        background-color: black;
+        color: white;
+    }
+
+    &.behance {
+        background-color: #0057ff;
+        color: white;
+    }
+
+    &.exposure {
+        background-color: black;
+        color: white;
+    }
+
+    &.linkedin {
+        background-color: #0077B5;
+        color: white;
+    }
+
+    &.sciexp {
+        background-image: linear-gradient(130deg,  #9C27B0, #FF5722);
+        color: white;
+    }
+
+    &.myg {
+        background-image: linear-gradient(130deg, #E90052, darken(#E90052, 10%));
+        // color: #0D003B;
+        color: white;
+    }
+}
+
+ul.skills {
+    list-style-type: none;
+    padding-left: 0;
+    margin-right: 10px;
+
+    li {
+        font-family: 'IBM Plex Sans';
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba($indigo700, 0.1);
+        margin-bottom: 5px;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.background {
+    position: absolute;
+    display: block;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0.2;
+}
