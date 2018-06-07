@@ -46,6 +46,8 @@
                     @media(max-width: 768px){
                         padding: 5px 5px;
                     }
+                    box-shadow: none !important;
+                    text-decoration: none !important;
                     color: $primary;
                     transition: all 0.3s ease;
 
