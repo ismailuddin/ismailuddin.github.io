@@ -35,7 +35,7 @@ include: ['_pages']
 paginate: 5
 highlighter: rouge
 disqus:
-    shortname: ismail-uddin-blog
+    shortname: 'ismail-uddin-blog'
 
 
 
