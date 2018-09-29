@@ -28,9 +28,13 @@ github_username:  jekyll
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 sass:
     sass_dir: _sass
 include: ['_pages']
+paginate: 5
+highlighter: rouge
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

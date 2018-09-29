@@ -32,13 +32,14 @@
         flex-basis: auto;
         flex-grow: 1;
         align-items: center;
-        margin-top: 20px;
 
         ul {
             list-style-type: none;
             display: flex;
             flex-direction: row;
             padding-left: 0px;
+            margin-bottom: 0;
+
             li {
                 font-family: 'IBM Plex Sans';
                 font-size: 1.2em;
@@ -48,6 +49,7 @@
                     }
                     box-shadow: none !important;
                     text-decoration: none !important;
+                    border-bottom: none !important;
                     color: $primary;
                     transition: all 0.3s ease;
 
