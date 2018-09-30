@@ -66,6 +66,39 @@ time {
 
     .post-content {
         margin-top: 15px;
+
+        img {
+            width: 75%;
+        }
+
+        .github-card {
+            margin-left: 3%;
+            width: 55%;
+            border-radius: 3px;
+            border: 2px solid rgba($indigo900dark, 0.1);
+            padding: 8px;
+            margin-bottom: 20px;
+
+            p {
+                font-size: 0.8em;
+                font-weight: 400;
+                margin-bottom: 5px;
+            }
+
+            .btn {
+                margin-bottom: 3px;
+            }
+
+            h3.repo-name {
+                color: rgba(black, 0.7);
+                font-size: 1.2em;
+                i {
+                    margin-top: 3px;
+                    color: rgba(black, 0.4);
+                    font-size: 2.2em;
+                }
+            }
+        }
     }
 
     h2 {

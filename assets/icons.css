@@ -3,10 +3,10 @@
 
 @font-face {
 	font-family:"icons";
-	src:url("icons.eot?cf375887824a8c388f7259703f2281cd");
+	src:url("icons.eot?d1ed382264b83f470f970055ffa969cf");
 	src:url("icons.eot?#iefix") format("embedded-opentype"),
-		url("icons.woff?cf375887824a8c388f7259703f2281cd") format("woff"),
-		url("icons.ttf?cf375887824a8c388f7259703f2281cd") format("truetype");
+		url("icons.woff?d1ed382264b83f470f970055ffa969cf") format("woff"),
+		url("icons.ttf?d1ed382264b83f470f970055ffa969cf") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -52,11 +52,16 @@
 }
 
 
-.icon_sciexp:before {
+.icon_repo:before {
 	content:"\f105";
 }
 
 
-.icon_twitter:before {
+.icon_sciexp:before {
 	content:"\f106";
+}
+
+
+.icon_twitter:before {
+	content:"\f107";
 }

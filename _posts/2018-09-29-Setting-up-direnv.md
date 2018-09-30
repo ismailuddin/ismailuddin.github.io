@@ -5,7 +5,7 @@ date:   2018-09-29
 categories: [python, general]
 ---
 
-The [`cookiecutter`](https://drivendata.github.io/cookiecutter-data-science/) project structure is quite popular with Python-based data science projects, but relies on virtual environments to work properly. This is because the project's re-usable code is intended to be packaged in the `/src` folder, and thus be available under the package name `src`. This is fine as long as you only have one project, but if you have multiple, the packages will begin to clash, hence the virtual environments.
+The [`cookiecutter`](https://drivendata.github.io/cookiecutter-data-science/) project structure is quite popular with Python-based data science projects, which relies on virtual environments to work properly. This is due to the project's re-usable code being kept in the `src/` folder, and thus accessed as a Python module named `src`. This is fine as long as you only have one project, but if you have multiple, the modules will begin to clash. Hence, the need for virtual environments.
 
 Although setting up the virtual environments is not an issue, constantly activating and de-activating them can be a pain. This is where [`direnv`](https://direnv.net/) comes in, a great little tool to automate activating / deactivating environments depending on the folder you're currently in.
 
