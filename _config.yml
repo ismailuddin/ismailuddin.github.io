@@ -34,7 +34,8 @@ sass:
 include: ['_pages']
 paginate: 5
 highlighter: rouge
-disqus: "ismail-uddin-blog"
+disqus:
+    shortname: "ismail-uddin-blog"
 
 
 

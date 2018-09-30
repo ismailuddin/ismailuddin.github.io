@@ -19,9 +19,18 @@
         flex: none;
 
         h3 {
-            @media(max-width: 768px){
-                font-size: 1.4em;
-                margin-top: 10px;
+            a {
+                @media(max-width: 768px){
+                    font-size: 1.4em;
+                    margin-top: 10px;
+                }
+                color: $primary;
+                transition: all 0.3s ease;
+
+                &:hover, &:focus, &:active {
+                    text-decoration: none;
+                    color: $deeporange400a;
+                }
             }
         }
     }

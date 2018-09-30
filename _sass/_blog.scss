@@ -1,3 +1,5 @@
+// Main blog page - posts list
+
 h1.blog-title {
     display: inline-block;
     font-size: 3.2em;
@@ -17,19 +19,26 @@ h1.blog-title {
     }
 }
 
-h3.sidebar {
-    // display: inline-block;
-    color: $deeporange400a;
-    padding: 5px;
-    font-weight: 700;
+h3.post-title {
+    margin-bottom: 0;
+    a {
+        color: $indigo900dark;
+        text-decoration: none !important;
+        transition: all 0.3s ease-in;
+
+        &:hover, &:focus, &:active {
+            color: $pink600;
+            text-decoration: none !important;
+        }
+    }
 }
 
-h1.post-single-title {
-    background-color: $cyan400a;
-    color: $primary;
-    display: inline-block;
-    padding: 5px;
+time {
+    color: rgba(black, 0.6);
+    font-size: 0.8em;
 }
+
+// Single blog post
 
 .blog-post {
     background-color: rgba(white, 0.8);
@@ -40,6 +49,13 @@ h1.post-single-title {
     @media(max-width: 786px){
         margin: 5px;
         padding: 10px;
+    }
+
+    h1.post-single-title {
+        background-color: $cyan400a;
+        color: $primary;
+        display: inline-block;
+        padding: 5px;
     }
 
     time {
@@ -83,29 +99,19 @@ h1.post-single-title {
     }
 }
 
-h3.post-title {
-    margin-bottom: 0;
-    a {
-        color: $indigo900dark;
-        text-decoration: none !important;
-        transition: all 0.3s ease-in;
-
-        &:hover, &:focus, &:active {
-            color: $pink600;
-            text-decoration: none !important;
-        }
-    }
-}
-
-time {
-    color: rgba(black, 0.6);
-    font-size: 0.8em;
-}
+// Blog side bar
 
 .sidebar-card {
+    h3.sidebar {
+        color: $deeporange400a;
+        padding: 5px;
+        font-weight: 700;
+    }
+
     background-color: rgba(white, 0.7);
     padding: 10px;
     margin: 10px 0px;
+    border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: 0px 15px 10px -10px rgba($indigo900dark, 0.15);
 
@@ -115,9 +121,7 @@ ul.categories-list {
     list-style: none;
     padding-left: 10px;
     li {
-        // margin-top: 5px;
         margin-bottom: 5px;
-        // padding-top: 5px;
         a {
             display: block;
             padding-bottom: 5px;

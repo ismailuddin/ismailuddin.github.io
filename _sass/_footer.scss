@@ -1,0 +1,10 @@
+footer {
+    p {
+        color: $primary;
+
+        &.muted {
+            color: rgba($bluegrey800, 0.6);
+
+        }
+    }
+}
