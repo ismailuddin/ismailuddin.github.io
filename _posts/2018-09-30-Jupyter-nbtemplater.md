@@ -10,10 +10,10 @@ Jupyter notebooks are a great tool for data science projects, and provide a nice
 <div class="github-card">
     <h3 class="repo-name">
         <div class="row">
-          <div class="col-lg-2">
+          <div class="col-lg-2 col-xs-2 col-sm-2">
               <i class="icon icon_repo"></i>
           </div>
-          <div class="col-lg-10">
+          <div class="col-lg-10 col-xs-10 col-sm-10">
               jupyter-nb-templater
               <br>
               ismailuddin

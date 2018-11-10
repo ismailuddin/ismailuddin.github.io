@@ -79,9 +79,14 @@ time {
             margin-left: 3%;
             width: 55%;
             border-radius: 3px;
-            border: 2px solid rgba($indigo900dark, 0.1);
+            border: 1px solid #DAE1E7;
             padding: 8px;
             margin-bottom: 20px;
+            background-color: #F8FAFC;
+
+            @media(max-width: 786px) {
+                width: 90%;
+            }
 
             p {
                 font-size: 0.8em;
