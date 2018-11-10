@@ -46,8 +46,9 @@ time {
     border-radius: 10px;
     margin: 10px;
     box-shadow: 0px 20px 25px -15px rgba($indigo900dark, 0.2);
+
     @media(max-width: 786px){
-        margin: 5px;
+        margin: 5px 0px;
         padding: 10px;
     }
 
@@ -56,6 +57,9 @@ time {
         color: $primary;
         display: inline-block;
         padding: 5px;
+        @media(max-width: 768px) {
+            font-size: 1.4em;
+        }
     }
 
     time {
@@ -119,16 +123,19 @@ time {
 
     pre {
         padding: 10px;
-        background-color: rgba(0,0,255, 0.03);
-        border-radius: 5px;
+        // background-color: rgba(0,0,255, 0.03);
+        background-color: #12283A;
+        // border-radius: 5px;
+        margin-bottom: 0;
         // border: 1px solid rgba($indigo900, 0.1);
     }
 
-    code.highlighter-rouge {
-        padding: 1px 4px;
-        background-color: rgba($cyan400a, 0.05);
-        border-radius: 3px;
-        border: 1px solid rgba($indigo900, 0.1);
+    .highlight {
+        padding: 5px;
+        background-color: #12283A;
+        border-radius: 5px;
+        // border: 1px solid rgba($indigo900, 0.1);
+        margin-bottom: 8px;
     }
 }
 
