@@ -4,10 +4,13 @@ $(document).ready(function(){
         $('#hideme').toggle();
     });
 
-    var particles = Particles.init({
-        selector: '.background',
-        color: '#000051',
-        sizeVariations: 10,
-        connectParticles: true
-    });
+    if ($('.background').css('display') != 'none') {
+        var particles = Particles.init({
+            selector: '.background',
+            color: '#000051',
+            sizeVariations: 10,
+            connectParticles: true
+        });
+    }
+
 });
