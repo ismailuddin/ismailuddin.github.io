@@ -61,7 +61,10 @@ p > a, ul > li > a {
 .card > ul {
     list-style-type: square;
     li {
+        font-family: 'IBM Plex Sans';
+        color: $bluegrey800;
         b {
+            font-family: 'IBM Plex Sans';
             color: $indigo900;
         }
         margin-bottom: 10px;
