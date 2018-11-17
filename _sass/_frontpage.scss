@@ -63,7 +63,6 @@ body {
         box-shadow: 0px 5px 10px rgba($teal800, 0.2);
     }
 
-
     ul {
         padding-left: 18px;
     }
@@ -98,6 +97,14 @@ body {
             outline: none;
         }
 
+    }
+
+    .company-logo {
+        height: 1.5em;
+        width: auto;
+        border-radius: 300px;
+        border: 1px solid rgba($bluegrey800, 0.1);
+        margin-right: 5px;
     }
 }
 
