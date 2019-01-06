@@ -1,5 +1,10 @@
 // Main blog page - posts list
 
+body.blog {
+    background: url('/assets/img/conway_gol_bg.png'), linear-gradient(130deg, #F7FAFC 3%, rgba(#DFEBF7, 0.5) 100%) ;
+    background-size: 100% auto;
+}
+
 h1.blog-title {
     display: inline-block;
     font-size: 3.2em;
@@ -128,19 +133,25 @@ time {
 
     pre {
         padding: 10px;
-        // background-color: rgba(0,0,255, 0.03);
         background-color: #12283A;
-        // border-radius: 5px;
         margin-bottom: 0;
-        // border: 1px solid rgba($indigo900, 0.1);
+    }
+
+    code.highlighter-rouge {
+        background-color: rgb(245, 240, 240);
+        padding: 2px 5px;
+        margin: 0px 3px;
+        border-radius: 3px;
     }
 
     .highlight {
         padding: 5px;
         background-color: #12283A;
         border-radius: 5px;
-        // border: 1px solid rgba($indigo900, 0.1);
-        margin-bottom: 8px;
+    }
+    
+    div.highlight {
+        margin-bottom: 15px;
     }
 }
 
