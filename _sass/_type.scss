@@ -4,6 +4,11 @@ h1, h2, h3, h4, h5, h6 {
     hr {
         border-top: 3px solid rgba(#34515e, 0.05);
     }
+    small {
+        font-size: 0.5em;
+        font-weight: 500;
+        color: rgba($primary, 0.4);
+    }
 }
 
 h2 {
@@ -16,6 +21,8 @@ h2 {
 h4 {
     color: $indigo900;
     small {
+        font-size: 0.7em;
+        font-weight: 300;
         color: $deeporange400a;
     }
 }

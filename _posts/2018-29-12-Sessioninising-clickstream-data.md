@@ -5,7 +5,7 @@ date:   2018-12-29
 categories: [python, general, data_science, multiprocessing]
 ---
 
-A common task when analysing clickstream data is to sessionise the individual clicks. This invovles aggregating individual clicks from a given cookie ID, into groups of clicks, whereby successive clicks have a time difference that is not greater than the session timeout value. The session timeout value is typically taken to be **20** or **30 minutes**. 
+A common task when analysing clickstream data is to sessionise the individual clicks. This invovles aggregating individual clicks from a given cookie ID, into groups of clicks, whereby successive clicks have a time difference that is not greater than the session timeout value. The session timeout value is typically taken to be **20** or **30 minutes**.
 
 This means a given session (group of clicks) can be either be very long or short, so long as successive clicks within the group do not have a time difference between them greater than session timeout.
 
@@ -81,7 +81,7 @@ df['session_boundary'] = df.session_boundary.apply(lambda row: True if row >= da
 ```
 
 ## Use the 'multiprocessing' module
-The `multiprocessing` module allows us to speed up computations by splitting tasks into separate processess, which the OS / CPU can distribute to different cores to speed up the job. However, for this particular task, we need to be careful how we split the DataFrame, as we need to keep clicks from individual cookie IDs together. To do so, we first implement the following function to partition the set of unique cookie IDs from our DataFrame. 
+The `multiprocessing` module allows us to speed up computations by splitting tasks into separate processess, which the OS / CPU can distribute to different cores to speed up the job. However, for this particular task, we need to be careful how we split the DataFrame, as we need to keep clicks from individual cookie IDs together. To do so, we first implement the following function to partition the set of unique cookie IDs from our DataFrame.
 
 This function will return N number of lists, each list containing a set of unique non-overlapping cookie IDs from our original DataFrame.
 
@@ -112,7 +112,7 @@ The `multiprocessing` module implements multiple ways to split a job into differ
 ```python
 def assign_sessions(df, partition: list, queue):
     """
-    Assigns sessions to partition of DataFrame, created using list of 
+    Assigns sessions to partition of DataFrame, created using list of
     unique cookie IDs provided in partition argument.
 
     Args:
@@ -179,6 +179,6 @@ final_df = rdf.sort_index()
 ```
 
 ## Performance
-So far, most functions took at most 3 s to complete, apart from converting the `datetime.timedelta` objects to boolean values which took around 30 s. The final step is the most computationally intensive, which if carried out in a single process takes about **70 seconds** on average. However, using parallel processing and six cores (~ 4 GHz max frequency), this reduced to as little as **14 seconds**. Ofcourse, these numbers are heavily dependent on the number of cores and clockspeed of your CPU, but the concept still applies to any multi-core CPU. 
+So far, most functions took at most 3 s to complete, apart from converting the `datetime.timedelta` objects to boolean values which took around 30 s. The final step is the most computationally intensive, which if carried out in a single process takes about **70 seconds** on average. However, using parallel processing and six cores (~ 4 GHz max frequency), this is reduced to as little as **14 seconds**. Ofcourse, these numbers are heavily dependent on the number of cores and clockspeed of your CPU, but the concept still applies to any multi-core CPU. 
 
 This method, thus, provides an easy way to achieve performance boosts from parallel processing on a desktop or laptop computer, without the need for a cluster. Any suggestions, improvements or corrections are welcome! Please leave a comment below!
