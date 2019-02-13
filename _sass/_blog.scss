@@ -3,6 +3,9 @@
 body.blog {
     background: url('/assets/img/conway_gol_bg.png'), linear-gradient(130deg, #F7FAFC 3%, rgba(#DFEBF7, 0.5) 100%) ;
     background-size: 100% auto;
+    @media(max-width: 768px) {
+        background-size: 200% auto;
+    }
 }
 
 h1.blog-title {
@@ -22,6 +25,10 @@ h1.blog-title {
         bottom: -10px;
         left: 10px;
     }
+}
+
+h4.blog-subtitle {
+    padding: 5px 20px;
 }
 
 h3.post-title {
@@ -149,7 +156,7 @@ time {
         background-color: #12283A;
         border-radius: 5px;
     }
-    
+
     div.highlight {
         margin-bottom: 15px;
     }
