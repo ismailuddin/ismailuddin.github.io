@@ -52,7 +52,7 @@ docker run -d -p 3306:3306 -v ~/db:/docker-entrypoint-initdb.d/
 Add environment flags with each `-e` flag:
 
 ```bash
-docker run -d -p 3306:3306 -v :/db:/docker-entrypoint-initdb.d/ -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=user
+docker run -d -p 3306:3306 -v ~/db:/docker-entrypoint-initdb.d/ -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=user
 ```
 
 ----------
@@ -93,7 +93,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-        - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+        - ./db/init.sql:/docker-entrypoint-initdb.d/
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: username
